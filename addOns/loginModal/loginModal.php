@@ -1,4 +1,4 @@
-<div class="modalContainer">
+<div class="modalContainer modalView">
     <div class="modalContent">
         <h2 class="loginTitle">Login</h2>
         <i class="fa fa-window-close" aria-hidden="true"></i>
