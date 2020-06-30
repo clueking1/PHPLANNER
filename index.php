@@ -14,13 +14,15 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/signup.css">
     <title>Plan It</title>
 </head>
 <body>
     <?php include("addOns/navBar/navBar.php");?>
     <?php include("addOns/loginModal/loginModal.php");?>
+    <?php include("addOns/signupModal/signupModal.php");?>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./JS/index.js"></script>
+    <script src="./JS/modal.js"></script>
 </body>
 </html>
