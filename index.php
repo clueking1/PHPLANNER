@@ -22,8 +22,10 @@ include('./config/config.php');
     <?php include("addOns/loginModal/loginModal.php");?>
     <?php include("addOns/signupModal/signupModal.php");?>
     <?php 
-        echo session_id();
         echo $_SESSION["username"];
+        if(isset($_SESSION["username"])) {
+            include("addOns/logOut/logOut.php");
+        }
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./JS/modal.js"></script>
