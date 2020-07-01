@@ -15,10 +15,13 @@ html, body {
 }
 
 .modalView {
-    
     display: none;
-    transition: .3s ease-in-out;
 }
+
+@keyframes mymove {
+    from {display: flex;}
+    to {display: none;}
+  }
 
 .modalContent {
     width:300px;
