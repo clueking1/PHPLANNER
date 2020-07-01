@@ -1,9 +1,9 @@
 <?php
 
 class UserLogin {
-    private $username;
+    public $username;
     private $password;
-    private $con;
+    public $con;
 
     function __construct($username, $password, $con) {
         $this->un = $username;
@@ -17,9 +17,12 @@ class UserLogin {
         $row = $result->fetch_assoc();
         $hash = $row["pw"];
         if (password_verify($this->pw, $hash)) {
-            echo "yesss";
+            session_start();
+            $_SESSION["username"] = $this->un;
+            header('Location: /PHPLANNER');
         } else {
             echo "noooo";
+           
         }
     }
 

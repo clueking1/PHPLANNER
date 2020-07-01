@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+spl_autoload_register(function ($class_name) {
+    include './classes/' . $class_name . '.php';
+});
+include('./config/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +21,10 @@
     <?php include("addOns/navBar/navBar.php");?>
     <?php include("addOns/loginModal/loginModal.php");?>
     <?php include("addOns/signupModal/signupModal.php");?>
-   
+    <?php 
+        echo session_id();
+        echo $_SESSION["username"];
+    ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./JS/modal.js"></script>
     <script src="./JS/form.js"></script>
